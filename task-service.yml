@@ -1,0 +1,27 @@
+spring:
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/Mini-Project
+          jwk-set-uri: http://localhost:8080/realms/Mini-Project/protocol/openid-connect/certs
+  application:
+    name: task-service
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+springdoc:
+  api-docs:
+    path: /task-service/v3/api-docs
+  swagger-ui:
+    path: /task-service/swagger-ui.html
+    oauth:
+      client-id: Mini-Project
+      client-secret: HC3neQnSa1iDHx37zR66kPxPLdKpGHiY
+

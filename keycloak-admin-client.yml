@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: keycloak-admin-client
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/Mini-Project
+
+keycloak:
+  auth-server-url: http://localhost:8080
+  realm: Mini-Project
+  clientId: Mini-Project
+  clientSecret: HC3neQnSa1iDHx37zR66kPxPLdKpGHiY
+
+springdoc:
+  api-docs:
+    path: /keycloak-admin-client/v3/api-docs
+  swagger-ui:
+    path: /keycloak-admin-client/swagger-ui.html
+    oauth:
+      client-id: Mini-Project
+      client-secret: HC3neQnSa1iDHx37zR66kPxPLdKpGHiY
