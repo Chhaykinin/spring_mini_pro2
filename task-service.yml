@@ -15,7 +15,8 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
-resilience4j:
+
+  resilience4j:
   circuitbreaker:
     instances:
       taskServiceCircuitBreaker:
@@ -27,6 +28,7 @@ resilience4j:
       sliding-window-size: 10
       sliding-window-type: COUNT_BASED
       wait-duration-in-open-state: 5s
+
 management:
   endpoints:
     web:
@@ -38,6 +40,7 @@ management:
   health:
     circuitbreakers:
       enabled: true
+
 springdoc:
   api-docs:
     path: /task-service/v3/api-docs
@@ -46,4 +49,3 @@ springdoc:
     oauth:
       client-id: Mini-Project
       client-secret: FSm6IxWQT8Vyo3nIzPqK17Yfg96D1zya
-
